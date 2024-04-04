@@ -1,113 +1,191 @@
-import Image from "next/image";
+import Image from "next/image"
+import { Suspense } from "react"
+import { unstable_noStore as noStore } from "next/cache"
+import Link from "next/link"
 
 export default function Home() {
-  return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
+	return (
+		<section>
+			{/* <PreloadResources /> */}
+			<h1 className="mb-8 text-2xl font-medium tracking-tighter">hey, I'm mshuecodev 👋</h1>
+			<p className="prose prose-neutral dark:prose-invert">
+				{`I'm a frontend developer, optimist, and community builder. I currently `}
+				<Link href="/work">work</Link>
+				{` as the VP of Product at `}.
+			</p>
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-full sm:before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full sm:after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
+			<div className="prose prose-neutral dark:prose-invert">
+				<p>I create educational content for developers, teaching them about web development, JavaScript and TypeScript, React and Next.js, and more. This comes in all forms: blog posts, videos, tweets, conference talks, and workshops. You can watch some of my favorites below.</p>
+			</div>
 
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
+			<div className="prose prose-neutral dark:prose-invert">
+				<p>Over the past decade, I've written content on my blog and newsletter. I try to keep things simple. You'll find writing about technologies I'm interested in at the time, or how I'm learning and growing in my career, sharing knowledge along the way.</p>
+			</div>
+			<div className="my-8 flex w-full flex-col space-y-4">
+				<BlogLink
+					name="What Makes A Great Developer Experience?"
+					slug="developer-experience-examples"
+				/>
+				<BlogLink
+					name="What is Developer Relations?"
+					slug="devrel-at-vercel"
+				/>
+				<BlogLink
+					name="The Story of Heroku"
+					slug="heroku"
+				/>
+			</div>
+			<div className="prose prose-neutral dark:prose-invert">
+				<p>I invest small angel checks into early stage startups building tools for developers.</p>
+			</div>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50 text-balance`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  );
+			<div className="prose prose-neutral dark:prose-invert">
+				<p>
+					I've worked with and advised companies on <Link href="/blog/developer-marketing">developer marketing</Link>, <Link href="/blog/devrel-at-vercel">developer relations</Link>, building open-source communities, product-led growth, and more.
+				</p>
+			</div>
+			<ul className="font-sm mt-8 flex flex-col space-x-0 space-y-2 text-neutral-600 md:flex-row md:space-x-4 md:space-y-0 dark:text-neutral-300">
+				<li>
+					<a
+						className="flex items-center transition-all hover:text-neutral-800 dark:hover:text-neutral-100"
+						rel="noopener noreferrer"
+						target="_blank"
+						href="https://twitter.com/leeerob"
+					>
+						<ArrowIcon />
+						<p className="ml-2 h-7">follow me</p>
+					</a>
+				</li>
+				<li>
+					<a
+						className="flex items-center transition-all hover:text-neutral-800 dark:hover:text-neutral-100"
+						rel="noopener noreferrer"
+						target="_blank"
+						href="https://leerob.substack.com"
+					>
+						<ArrowIcon />
+						<p className="ml-2 h-7">get email updates</p>
+					</a>
+				</li>
+			</ul>
+		</section>
+	)
 }
+
+function Badge(props: any) {
+	return (
+		<a
+			{...props}
+			target="_blank"
+			className="inline-flex items-center rounded border border-neutral-200 bg-neutral-50 p-1 text-sm leading-4 text-neutral-900 no-underline dark:border-neutral-700 dark:bg-neutral-800 dark:text-neutral-100"
+		/>
+	)
+}
+
+function ArrowIcon() {
+	return (
+		<svg
+			width="12"
+			height="12"
+			viewBox="0 0 12 12"
+			fill="none"
+			xmlns="http://www.w3.org/2000/svg"
+		>
+			<path
+				d="M2.07102 11.3494L0.963068 10.2415L9.2017 1.98864H2.83807L2.85227 0.454545H11.8438V9.46023H10.2955L10.3097 3.09659L2.07102 11.3494Z"
+				fill="currentColor"
+			/>
+		</svg>
+	)
+}
+
+// function ChannelLink({ img, link, name }) {
+// 	return (
+// 		<div className="group flex w-full">
+// 			<a
+// 				href={link}
+// 				target="_blank"
+// 				className="flex w-full items-center justify-between rounded border border-neutral-200 bg-neutral-50 px-3 py-4 dark:border-neutral-700 dark:bg-neutral-800"
+// 			>
+// 				<div className="flex items-center space-x-3">
+// 					<div className="relative h-16">
+// 						<Image
+// 							alt={name}
+// 							src={img}
+// 							height={64}
+// 							width={64}
+// 							sizes="33vw"
+// 							className="h-16 w-16 rounded-full border border-neutral-200 dark:border-neutral-700"
+// 							priority
+// 						/>
+// 						<div className="relative -right-10 -top-6 inline-flex h-6 w-6 items-center rounded-full border border-neutral-200 bg-white p-1 dark:border-neutral-700">
+// 							<svg
+// 								width="15"
+// 								height="11"
+// 								role="img"
+// 								aria-label="YouTube logo"
+// 							>
+// 								<use href="/sprite.svg#youtube" />
+// 							</svg>
+// 						</div>
+// 					</div>
+// 					<div className="flex flex-col">
+// 						<p className="font-medium text-neutral-900 dark:text-neutral-100">{name}</p>
+// 						<Suspense fallback={<p className="h-6" />}>
+// 							<Subs name={name} />
+// 						</Suspense>
+// 					</div>
+// 				</div>
+// 				<div className="transform text-neutral-700 transition-transform duration-300 group-hover:-rotate-12 dark:text-neutral-300">
+// 					<ArrowIcon />
+// 				</div>
+// 			</a>
+// 		</div>
+// 	)
+// }
+
+// async function Subs({ name }: { name: string }) {
+// 	noStore()
+// 	let subscribers
+// 	if (name === "@leerob") {
+// 		subscribers = await getLeeYouTubeSubs()
+// 	} else {
+// 		subscribers = await getVercelYouTubeSubs()
+// 	}
+
+// 	return <p className="text-neutral-600 dark:text-neutral-400">{subscribers} subscribers</p>
+// }
+
+interface BlogLinkProps {
+	slug: string
+	name: string
+}
+
+const BlogLink: React.FC<BlogLinkProps> = ({ slug, name }) => {
+	return (
+		<div className="group">
+			<a
+				href={`/blog/${slug}`}
+				className="flex w-full items-center justify-between rounded border border-neutral-200 bg-neutral-50 px-3 py-4 dark:border-neutral-700 dark:bg-neutral-800"
+			>
+				<div className="flex flex-col">
+					<p className="font-medium text-neutral-900 dark:text-neutral-100">{name}</p>
+					<Suspense fallback={<p className="h-6" />}>{/* <Views slug={slug} /> */}</Suspense>
+				</div>
+				<div className="transform text-neutral-700 transition-transform duration-300 group-hover:-rotate-12 dark:text-neutral-300">
+					<ArrowIcon />
+				</div>
+			</a>
+		</div>
+	)
+}
+
+// async function Views({ slug }: { slug: string }) {
+// 	let views = await getViewsCount()
+// 	return (
+// 		<ViewCounter
+// 			allViews={views}
+// 			slug={slug}
+// 		/>
+// 	)
+// }
