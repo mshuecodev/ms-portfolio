@@ -8,20 +8,14 @@ export default function Home() {
 		<section>
 			{/* <PreloadResources /> */}
 			<h1 className="mb-8 text-2xl font-medium tracking-tighter">hey, I'm mshuecodev 👋</h1>
-			<p className="prose prose-neutral dark:prose-invert">
-				{`I'm a frontend developer, optimist, and community builder. I currently `}
-				<Link href="/work">work</Link>
-				{` as the VP of Product at `}.
-			</p>
+			{/* <p className="prose prose-neutral dark:prose-invert">{`I'm a passionate Full Stack Developer specializing in React.js, Node.js and React Native. `}</p> */}
+			<p className="prose prose-neutral dark:prose-invert">{`I'm a full stack developer with a deep passion for crafting exceptional digital experiences.  `}</p>
 
 			<div className="prose prose-neutral dark:prose-invert">
-				<p>I create educational content for developers, teaching them about web development, JavaScript and TypeScript, React and Next.js, and more. This comes in all forms: blog posts, videos, tweets, conference talks, and workshops. You can watch some of my favorites below.</p>
+				<p>With several years of experience in the field, I have honed my skills in building robust and scalable applications using a variety of technology, with a primary focus on React.js, Node.js and React Native.</p>
 			</div>
 
-			<div className="prose prose-neutral dark:prose-invert">
-				<p>Over the past decade, I've written content on my blog and newsletter. I try to keep things simple. You'll find writing about technologies I'm interested in at the time, or how I'm learning and growing in my career, sharing knowledge along the way.</p>
-			</div>
-			<div className="my-8 flex w-full flex-col space-y-4">
+			{/* <div className="my-8 flex w-full flex-col space-y-4">
 				<BlogLink
 					name="What Makes A Great Developer Experience?"
 					slug="developer-experience-examples"
@@ -34,8 +28,8 @@ export default function Home() {
 					name="The Story of Heroku"
 					slug="heroku"
 				/>
-			</div>
-			<div className="prose prose-neutral dark:prose-invert">
+			</div> */}
+			{/* <div className="prose prose-neutral dark:prose-invert">
 				<p>I invest small angel checks into early stage startups building tools for developers.</p>
 			</div>
 
@@ -43,8 +37,8 @@ export default function Home() {
 				<p>
 					I've worked with and advised companies on <Link href="/blog/developer-marketing">developer marketing</Link>, <Link href="/blog/devrel-at-vercel">developer relations</Link>, building open-source communities, product-led growth, and more.
 				</p>
-			</div>
-			<ul className="font-sm mt-8 flex flex-col space-x-0 space-y-2 text-neutral-600 md:flex-row md:space-x-4 md:space-y-0 dark:text-neutral-300">
+			</div> */}
+			{/* <ul className="font-sm mt-8 flex flex-col space-x-0 space-y-2 text-neutral-600 md:flex-row md:space-x-4 md:space-y-0 dark:text-neutral-300">
 				<li>
 					<a
 						className="flex items-center transition-all hover:text-neutral-800 dark:hover:text-neutral-100"
@@ -67,7 +61,7 @@ export default function Home() {
 						<p className="ml-2 h-7">get email updates</p>
 					</a>
 				</li>
-			</ul>
+			</ul> */}
 		</section>
 	)
 }
