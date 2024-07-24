@@ -3,7 +3,7 @@ import React, { useEffect, useRef } from "react"
 
 import { useActiveSection } from "../context/ActiveSectionContext"
 
-import { SectionHeader, Section, ExperienceItem, ProjectItem } from "./GlobalComponent"
+import { Section, ExperienceItem, ProjectItem } from "./GlobalComponent"
 
 const Right: React.FC = () => {
 	const { setActiveSection } = useActiveSection()
