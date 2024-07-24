@@ -4,6 +4,14 @@ import React, { useEffect, useRef } from "react"
 import { useActiveSection } from "../context/ActiveSectionContext"
 
 import { Section, ExperienceItem, ProjectItem } from "./GlobalComponent"
+import experienceData from "./experience.json"
+import projectsData from "./projects.json"
+
+const aboutMe = "I am Fullstack Developer specializing in both web and mobile application development. With 5 years of experience in the tech industry, I've developed a strong foundation in creating efficient and user-friendly applications."
+
+const aboutMe2 = "As a freelancer, I enjoy working on a variety of projects that keep me engaged and constantly learning. I'm currently diving into cybersecurity to broaded my knowledge and ensure that application I build are secure."
+
+const aboutMe3 = "I'm naturally curious and passionate about my work, always looking for ways to improve my skills and keep up with the latest technology trends."
 
 const Right: React.FC = () => {
 	const { setActiveSection } = useActiveSection()
@@ -43,9 +51,9 @@ const Right: React.FC = () => {
 				title="About"
 			>
 				<div>
-					<p className="mb-4">Back in 2012, I decided to try my hand at creating custom Tumblr themes and tumbled head first into the rabbit hole of coding and web development. Fast-forward to today, and I’ve had the privilege of building software for an .</p>
-					<p className="mb-4">My main focus these days is building accessible user interfaces for our customers at that covers everything you need to know to build a web app with the Spotify API.</p>
-					<p>When I’m not at the computer, I’m usually rock climbing, reading, hanging out with my wife and two cats, or running around Hyrule searching for .</p>
+					<p className="mb-4">{aboutMe}</p>
+					<p className="mb-4">{aboutMe2}</p>
+					<p className="mb-4">{aboutMe3}</p>
 				</div>
 			</Section>
 
@@ -55,23 +63,21 @@ const Right: React.FC = () => {
 				title="Experience"
 			>
 				<ol className="group/list">
-					<ExperienceItem
-						dateRange="2024 — Present"
-						position="Senior Frontend Engineer, Accessibility"
-						company="Klaviyo"
-						companyUrl="https://www.klaviyo.com"
-						description="Build and maintain critical components used to construct Klaviyo’s frontend, across the whole product. Work closely with cross-functional teams, including developers, designers, and product managers, to implement and advocate for best practices in web accessibility."
-						technologies={["JavaScript", "TypeScript", "React", "Storybook"]}
-					/>
+					{experienceData.map((item, index) => (
+						<ExperienceItem
+							key={index}
+							{...item}
+						/>
+					))}
 
-					<ExperienceItem
+					{/* <ExperienceItem
 						dateRange="2024 — Present"
 						position="Senior Frontend Engineer, Accessibility"
 						company="Klaviyo"
 						companyUrl="https://www.klaviyo.com"
 						description="Build and maintain critical components used to construct Klaviyo’s frontend, across the whole product. Work closely with cross-functional teams, including developers, designers, and product managers, to implement and advocate for best practices in web accessibility."
 						technologies={["JavaScript", "TypeScript", "React", "Storybook"]}
-					/>
+					/> */}
 				</ol>
 				<div className="mt-12">
 					<a
@@ -110,8 +116,12 @@ const Right: React.FC = () => {
 				title="Projects"
 			>
 				<ul className="group/list">
-					<ProjectItem />
-					<ProjectItem />
+					{projectsData.map((item, index) => (
+						<ProjectItem
+							key={index}
+							{...item}
+						/>
+					))}
 				</ul>
 			</Section>
 		</main>

@@ -66,7 +66,7 @@ const Left: React.FC<LeftProps> = ({ profileData }) => {
 					label="LinkedIn"
 					icon={<FaLinkedin className="h-6 w-6" />}
 				/>
-				<SocialLink
+				{/* <SocialLink
 					href={profileData.instaURL}
 					label="Instagram"
 					icon={<FaInstagram className="h-6 w-6" />}
@@ -75,7 +75,7 @@ const Left: React.FC<LeftProps> = ({ profileData }) => {
 					href={profileData.twitterURL}
 					label="Twitter"
 					icon={<FaTwitter className="h-6 w-6" />}
-				/>
+				/> */}
 			</ul>
 		</header>
 	)

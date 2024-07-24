@@ -1,0 +1,22 @@
+[
+	{
+		"title": "AFFA WMS Project",
+		"description": "Build and maintain a digital workforce management system that replace old manual processes with a more efficient digital solution. This digital transformation has made workflows more efficient, reduced administrative workload, and provided real-time insight into workforce activities.",
+		"technologies": ["React", "NodeJS", "Express.Js", "MongoDB"]
+	},
+	{
+		"title": "SEDAP APP",
+		"description": "Build a system that detect and prevent stunting stunting,a significant health issue affecting children. This project involves developing a digital solution that helps monitor growth metrics, identify risk factors and provide actionable insight to healthcare proffesionals.",
+		"technologies": ["React", "React Native", "NodeJS", "Express.Js", "MongoDB"]
+	},
+	{
+		"title": "Information System for LRT",
+		"description": "Collaborated on developing an information system for LRT",
+		"technologies": ["React", "NodeJS", "MongoDB", "Express.Js"]
+	},
+	{
+		"title": "SIMLAB",
+		"description": "Developed a comprehensive laboratory management system, handling everything from user registration to retrieving lab result. This project aimed to streamline laboratory operations, improve efficiency, and ensure accurate and timely delivery of lab results to users.",
+		"technologies": ["React", "NodeJS", "MongoDB", "Express.Js"]
+	}
+]

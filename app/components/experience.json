@@ -1,0 +1,18 @@
+[
+	{
+		"dateRange": "2023 - PRESENT",
+		"position": "Fullstack Developer",
+		"company": "Self Employed",
+		"companyUrl": "#",
+		"description": "",
+		"technologies": ["React", "React Native", "NodeJS", "Express.Js", "MongoDB", "NextJs", "TypeScript"]
+	},
+	{
+		"dateRange": "NOV - JUN 2023",
+		"position": "Fullstack Developer",
+		"company": "PT. Brilyan Trimatra Utama",
+		"companyUrl": "#",
+		"description": "In this role, I worked on various Fullstack development projets, creating dynamic and responsive applications. My duties including collaborating with cross-functional team to define project requirements, developing, and testing code, and deploying applications.",
+		"technologies": ["React", "React Native", "NodeJS", "Express.Js", "MongoDB"]
+	}
+]

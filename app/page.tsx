@@ -7,11 +7,11 @@ import "tailwindcss/tailwind.css"
 import { ActiveSectionProvider } from "./context/ActiveSectionContext"
 
 const profileData = {
-	name: "John Doe",
-	subtext: "Web Developer",
-	jobStatus: "Available for hire",
-	twitterURL: "https://twitter.com",
-	instaURL: "https://instagram.com",
+	name: "Hi, I'm Misna Syari",
+	subtext: "Fullstack Developer",
+	jobStatus: "Currently freelancing and loving it!",
+	// twitterURL: "https://twitter.com",
+	// instaURL: "https://instagram.com",
 	githubURL: "https://github.com",
 	linkedinURL: "https://linkedin.com"
 }
