@@ -9,8 +9,8 @@ interface ProfileData {
 	name: string
 	subtext: string
 	jobStatus: string
-	twitterURL: string
-	instaURL: string
+	// twitterURL: string
+	// instaURL: string
 	githubURL: string
 	linkedinURL: string
 }
