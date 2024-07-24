@@ -19,7 +19,7 @@ const profileData = {
 const Home: React.FC = () => {
 	const [backgroundStyle, setBackgroundStyle] = useState("radial-gradient(600px at 829px 1693px, rgba(29, 78, 216, 0.15), transparent 80%)")
 
-	const handleMouseMove = (event) => {
+	const handleMouseMove = (event: any) => {
 		const { clientX, clientY } = event
 		setBackgroundStyle(`radial-gradient(600px at ${clientX}px ${clientY}px, rgba(29, 78, 216, 0.15), transparent 80%)`)
 	}
