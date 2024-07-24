@@ -2,7 +2,7 @@
 import React, { useState, useRef, useEffect } from "react"
 import Left from "./components/Left"
 import Right from "./components/Right"
-import "tailwindcss/tailwind.css"
+// import "tailwindcss/tailwind.css"
 
 import { ActiveSectionProvider } from "./context/ActiveSectionContext"
 
