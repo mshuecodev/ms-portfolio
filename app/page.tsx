@@ -8,7 +8,6 @@ export default function Home() {
 		<section>
 			{/* <PreloadResources /> */}
 			<h1 className="mb-8 text-2xl font-medium tracking-tighter">hey, I'm mshuecodev 👋</h1>
-			{/* <p className="prose prose-neutral dark:prose-invert">{`I'm a passionate Full Stack Developer specializing in React.js, Node.js and React Native. `}</p> */}
 			<p className="prose prose-neutral dark:prose-invert">{`I'm a full stack developer with a deep passion for crafting exceptional digital experiences.  `}</p>
 
 			<div className="prose prose-neutral dark:prose-invert">
