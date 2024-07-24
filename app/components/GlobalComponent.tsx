@@ -4,7 +4,7 @@ import React, { forwardRef } from "react"
 const SectionHeader = forwardRef<HTMLHeadingElement, { id: string; title: string }>(({ id, title }, ref) => (
 	<div
 		ref={ref}
-		className="sticky top-0 z-20 -mx-6 mb-4 w-screen bg-slate-900/75 px-6 py-5 backdrop-blur md:-mx-12 md:px-12 lg:sr-only lg:relative lg:top-auto lg:mx-auto lg:w-full lg:px-0 lg:py-0 lg:opacity-0"
+		className="sticky top-0 z-20 -mx-6 mb-4 w-screen bg-emerald-400 px-6 py-5 backdrop-blur md:-mx-12 md:px-12 lg:sr-only lg:relative lg:top-auto lg:mx-auto lg:w-full lg:px-0 lg:py-0 lg:opacity-0"
 	>
 		<h2
 			id={id}
@@ -41,7 +41,7 @@ const ExperienceItem: React.FC<{
 }> = ({ dateRange, position, company, companyUrl, description, technologies }) => (
 	<li className="mb-12">
 		<div className="group relative grid pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 lg:hover:!opacity-100 lg:group-hover:list:opacity-50">
-			<div className="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-slate-800/50 lg:group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] lg:group-hover:drop-shadow-lg"></div>
+			<div className="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-emerald-950 lg:group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] lg:group-hover:drop-shadow-lg"></div>
 			<header
 				className="z-10 mb-2 mt-1 text-xs font-semibold uppercase tracking-wide text-slate-500 sm:col-span-2"
 				aria-label={dateRange}
@@ -86,11 +86,11 @@ const ExperienceItem: React.FC<{
 const NavLink: React.FC<{ href: string; text: string; isActive: boolean }> = ({ href, text, isActive }) => (
 	<li>
 		<a
-			className={`group flex items-center py-3 ${isActive ? "text-blue-500" : ""}`}
+			className={`group flex items-center py-3 ${isActive ? "text-blue-200" : ""}`}
 			href={href}
 		>
-			<span className={`nav-indicator mr-4 h-px w-8 bg-slate-600 transition-all ${isActive ? "w-16 bg-blue-500" : ""} group-hover:w-16 group-hover:bg-slate-200 group-focus-visible:w-16 group-focus-visible:bg-slate-200 motion-reduce:transition-none`}></span>
-			<span className="nav-text text-xs font-bold uppercase tracking-widest text-slate-500 group-hover:text-slate-200 group-focus-visible:text-slate-200">{text}</span>
+			<span className={`nav-indicator mr-4 h-px w-8 bg-slate-600 transition-all ${isActive ? "w-16 bg-blue-200" : ""} group-hover:w-16 group-hover:bg-slate-200 group-focus-visible:w-16 group-focus-visible:bg-slate-200 motion-reduce:transition-none`}></span>
+			<span className={`nav-text text-xs font-bold uppercase tracking-widest ${isActive ? "text-blue-200" : "text-slate-500"}  group-hover:text-slate-200 group-focus-visible:text-slate-200`}>{text}</span>
 		</a>
 	</li>
 )
@@ -114,11 +114,11 @@ const SocialLink: React.FC<{ href: string; label: string; icon: JSX.Element }> =
 const ProjectItem = () => (
 	<li className="mb-12">
 		<div className="group relative grid gap-4 pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 lg:hover:!opacity-100 lg:group-hover:list:opacity-50">
-			<div className="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md transition lg:-inset-x-6 lg:block lg:group-hover:bg-slate-800/50 lg:group-hover:shadow-lg"></div>
+			<div className="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md transition lg:-inset-x-6 lg:block lg:group-hover:bg-emerald-950 lg:group-hover:shadow-lg"></div>
 			<div className="z-10 sm:order-2 sm:col-span-6">
 				<h3>
 					<a
-						className="inline-flex items-baseline font-medium leading-tight text-slate-200 hover:text-teal-300 focus-visible:text-teal-300 group/link text-base"
+						className="inline-flex items-baseline font-medium leading-tight text-slate-200 hover:text-teal-300 focus-visible:text-teal-300 group/link text-base transition-colors duration-300 ease-in-out"
 						href="https://www.newline.co/courses/build-a-spotify-connected-app"
 						target="_blank"
 						rel="noreferrer noopener"
