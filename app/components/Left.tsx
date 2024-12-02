@@ -12,7 +12,7 @@ interface ProfileData {
 	// twitterURL: string
 	// instaURL: string
 	githubURL: string
-	linkedinURL: string
+	// linkedinURL: string
 }
 
 interface LeftProps {
@@ -61,11 +61,11 @@ const Left: React.FC<LeftProps> = ({ profileData }) => {
 					label="GitHub"
 					icon={<FaGithub className="h-6 w-6" />}
 				/>
-				<SocialLink
+				{/* <SocialLink
 					href={profileData.linkedinURL}
 					label="LinkedIn"
 					icon={<FaLinkedin className="h-6 w-6" />}
-				/>
+				/> */}
 				{/* <SocialLink
 					href={profileData.instaURL}
 					label="Instagram"

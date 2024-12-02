@@ -12,8 +12,8 @@ const profileData = {
 	jobStatus: "Currently freelancing and loving it!",
 	// twitterURL: "https://twitter.com",
 	// instaURL: "https://instagram.com",
-	githubURL: "https://github.com",
-	linkedinURL: "https://linkedin.com"
+	githubURL: "https://github.com/mshuecodev"
+	// linkedinURL: "https://linkedin.com"
 }
 
 const Home: React.FC = () => {
