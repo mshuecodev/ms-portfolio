@@ -124,10 +124,10 @@ const ProjectItem: React.FC<{
 				<h3>
 					<a
 						className="inline-flex items-baseline font-medium leading-tight text-slate-200 hover:text-teal-300 focus-visible:text-teal-300 group/link text-base transition-colors duration-300 ease-in-out"
-						href="https://www.newline.co/courses/build-a-spotify-connected-app"
+						// href="https://www.newline.co/courses/build-a-spotify-connected-app"
 						target="_blank"
 						rel="noreferrer noopener"
-						aria-label="Build a Spotify Connected App (opens in a new tab)"
+						// aria-label="Build a Spotify Connected App (opens in a new tab)"
 					>
 						{title}
 						<span className="inline-block ml-1">
